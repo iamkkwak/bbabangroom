@@ -22,6 +22,7 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@containers/*": ["containers/*"],
+      "@icons": ["icons"],
       "@layouts/*": ["layouts/*"],
       "@styles/*": ["styles/*"]
     }
