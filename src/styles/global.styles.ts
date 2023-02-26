@@ -90,9 +90,7 @@ const resetStyles = css`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    vertical-align: middle;
   }
   /* HTML5 display-role reset for older browsers */
   article,
@@ -107,9 +105,6 @@ const resetStyles = css`
   nav,
   section {
     display: block;
-  }
-  body {
-    line-height: 1;
   }
   ol,
   ul {
@@ -136,13 +131,44 @@ export const globalStyles = css`
   ${resetStyles};
 
   @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-family: 'TmoneyRoundWind';
     font-weight: 400;
     font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot?#iefix')
+        format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf') format('truetype');
+    font-display: swap;
   }
 
   :root {
-    font-family: 'Pretendard-Regular';
+    font-size: 56.25%;
+  }
+  @media (min-width: 768px) {
+    :root {
+      font-size: 62.5%;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: 'TmoneyRoundWind', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
