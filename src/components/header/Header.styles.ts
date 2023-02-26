@@ -8,6 +8,7 @@ export const header = css`
   display: flex;
   align-items: center;
   width: 100%;
+  min-height: 5.8rem;
   padding: 1.2rem 0;
   background: linear-gradient(45deg, ${mainColor.c01}, ${mainColor.c02});
   box-shadow: rgb(0 0 0 / 8%) 0px 0px 1rem;

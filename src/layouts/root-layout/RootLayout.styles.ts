@@ -10,5 +10,5 @@ export const wrapper = css`
 
 export const section = css`
   flex: 1;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 `;
