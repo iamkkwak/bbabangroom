@@ -21,7 +21,9 @@
       "@apis/*": ["apis/*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
       "@containers/*": ["containers/*"],
+      "@hooks/*": ["hooks/*"],
       "@icons": ["icons"],
       "@layouts/*": ["layouts/*"],
       "@styles/*": ["styles/*"]
