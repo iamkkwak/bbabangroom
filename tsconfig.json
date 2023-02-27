@@ -25,7 +25,7 @@
       "@containers/*": ["containers/*"],
       "@hooks/*": ["hooks/*"],
       "@icons": ["icons"],
-      "@layouts/*": ["layouts/*"],
+      "@layouts": ["layouts"],
       "@styles/*": ["styles/*"]
     }
   },

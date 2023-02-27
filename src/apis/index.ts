@@ -23,7 +23,9 @@ const headers = {
 };
 
 export async function getEvents() {
-  const url = new URL('https://timetreeapis.com/calendars/Wfov6zUzT6yX/upcoming_events');
+  const url = new URL(
+    'https://timetreeapis.com/calendars/Wfov6zUzT6yX/upcoming_events',
+  );
   const params = {
     timezone: 'Asia/Seoul',
     days: '7',

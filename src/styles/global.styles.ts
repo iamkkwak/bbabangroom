@@ -137,9 +137,12 @@ export const globalStyles = css`
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot');
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot?#iefix')
         format('embedded-opentype'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff2') format('woff2'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff') format('woff'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf') format('truetype');
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff2')
+        format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff')
+        format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf')
+        format('truetype');
     font-display: swap;
   }
 
@@ -154,7 +157,8 @@ export const globalStyles = css`
 
   * {
     box-sizing: border-box;
-    font-family: 'TmoneyRoundWind', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    font-family: 'TmoneyRoundWind', 'Apple SD Gothic Neo', 'Malgun Gothic',
+      sans-serif;
   }
 
   html,

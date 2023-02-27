@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { css, Global } from '@emotion/react';
+import {
+  ErrorLayout,
+  HomeLayout,
+  PriceLayout,
+  RootLayout,
+  StatusLayout,
+} from '@layouts';
 import { MantineProvider } from '@mantine/core';
 import { globalStyles } from '@styles/global.styles';
-
-import { ErrorLayout, HomeLayout, PriceLayout, RootLayout, StatusLayout } from './layouts';
 
 const router = createBrowserRouter([
   {

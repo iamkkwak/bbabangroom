@@ -11,7 +11,12 @@ interface HomeLinkButtonProps {
   icon: IconProp;
 }
 
-const HomeLinkButton: React.FC<HomeLinkButtonProps> = ({ title, content, icon, to }) => {
+const HomeLinkButton: React.FC<HomeLinkButtonProps> = ({
+  title,
+  content,
+  icon,
+  to,
+}) => {
   return (
     <Link to={to} css={styles.homeLinkButton}>
       <div>

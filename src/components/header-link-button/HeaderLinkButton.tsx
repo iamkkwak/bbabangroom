@@ -2,9 +2,17 @@ import { Button, MantineNumberSize, MantineTheme } from '@mantine/core';
 
 const buttonStyles = (
   theme: MantineTheme,
-  payload: { backgroundColor?: string; color?: string; hasContent?: boolean },
+  payload: {
+    backgroundColor?: string;
+    color?: string;
+    hasContent?: boolean;
+  },
 ) => {
-  const { backgroundColor = 'inherit', color = 'inherit', hasContent = true } = payload;
+  const {
+    backgroundColor = 'inherit',
+    color = 'inherit',
+    hasContent = true,
+  } = payload;
 
   return {
     root: {
@@ -32,10 +40,23 @@ interface HeaderLinkButtonProps {
   href?: string;
 }
 
-const HeaderLinkButton: React.FC<HeaderLinkButtonProps> = ({ content, backgroundColor, color, icon, radius, href }) => {
+const HeaderLinkButton: React.FC<HeaderLinkButtonProps> = ({
+  content,
+  backgroundColor,
+  color,
+  icon,
+  radius,
+  href,
+}) => {
   return (
     <Button
-      styles={(theme) => buttonStyles(theme, { backgroundColor, color, hasContent: !!content })}
+      styles={(theme) =>
+        buttonStyles(theme, {
+          backgroundColor,
+          color,
+          hasContent: !!content,
+        })
+      }
       radius={radius}
       leftIcon={icon}
       component={href ? 'a' : 'button'}

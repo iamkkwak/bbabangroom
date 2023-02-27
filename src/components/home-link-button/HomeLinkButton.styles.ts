@@ -19,7 +19,8 @@ export const homeLinkButton = css`
     padding: 4rem 3rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0px 10px 15px -5px, rgb(0 0 0 / 4%) 0px 7px 7px -5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0px 10px 15px -5px,
+      rgb(0 0 0 / 4%) 0px 7px 7px -5px;
 
     color: black;
     line-height: 1.5;
