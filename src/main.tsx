@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { css, Global } from '@emotion/react';
@@ -35,14 +34,14 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <Global
-      styles={css`
-        ${globalStyles}
-      `}
-    />
+  <>
     <MantineProvider>
+      <Global
+        styles={css`
+          ${globalStyles}
+        `}
+      />
       <RouterProvider router={router} />
     </MantineProvider>
-  </React.StrictMode>,
+  </>,
 );

@@ -11,4 +11,5 @@ export const wrapper = css`
 export const section = css`
   flex: 1;
   padding-bottom: 2.5rem;
+  overflow: auto;
 `;
