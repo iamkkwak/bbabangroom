@@ -21,9 +21,9 @@ const buttonStyles = (
       height: '3.4rem',
       fontSize: '1.4rem',
       padding: '0 1.8rem',
-      '&:hover': {
+      '&:not([data-disabled])': theme.fn.hover({
         backgroundColor: theme.fn.darken(backgroundColor, 0.05),
-      },
+      }),
     },
     leftIcon: {
       marginRight: hasContent ? '1rem' : 0,
