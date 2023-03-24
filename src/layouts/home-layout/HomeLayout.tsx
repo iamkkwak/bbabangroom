@@ -1,15 +1,13 @@
-import { useMemo } from 'react';
 import HomeLinkButton from '@components/home-link-button/HomeLinkButton';
 import { faCalendarCheck, faCoins } from '@fortawesome/free-solid-svg-icons';
-import { useViewportSize } from '@mantine/hooks';
+import { useLandscape } from '@hooks/useViewport';
 
 import * as styles from './HomeLayout.styles';
 
 interface HomeLayoutProps {}
 
 const HomeLayout: React.FC<HomeLayoutProps> = () => {
-  const { height, width } = useViewportSize();
-  const isLandscape = useMemo(() => height * 1.25 < width, [height, width]);
+  const isLandscape = useLandscape();
 
   return (
     <div css={styles.homeLayout}>
