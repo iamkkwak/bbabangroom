@@ -1,3 +1,5 @@
+import { fetchWithTimeout } from '@utils/api.utils';
+
 const { VITE_TIMETREE_TOKEN } = import.meta.env;
 
 // https://developers.timetreeapp.com/en/docs/api/oauth-app#list-upcoming-events
@@ -17,12 +19,14 @@ interface Event {
   };
 }
 
+export type Events = Array<Event>;
+
 const headers = {
   Accept: 'application/vnd.timetree.v1+json',
   Authorization: `Bearer ${VITE_TIMETREE_TOKEN}`,
 };
 
-export async function getEvents() {
+export async function getEvents(): Promise<Events> {
   const url = new URL(
     'https://timetreeapis.com/calendars/Wfov6zUzT6yX/upcoming_events',
   );
@@ -32,11 +36,12 @@ export async function getEvents() {
   };
   url.search = new URLSearchParams(params).toString();
 
-  const response = await fetch(url, {
+  const response = await fetchWithTimeout(url, {
     method: 'GET',
     headers,
   });
-  const data: Array<Event> = await response.json();
+
+  const { data } = await response.json();
 
   return data;
 }
