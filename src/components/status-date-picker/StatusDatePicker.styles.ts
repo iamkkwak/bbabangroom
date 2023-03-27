@@ -22,7 +22,19 @@ export const datePickerWrap = css`
 
   .mantine-DatePicker-month {
     width: 30rem;
-    height: 24rem;
+  }
+
+  .mantine-DatePicker-monthRow {
+    height: 4.1rem;
+
+    > td {
+      height: inherit;
+    }
+
+    .mantine-Indicator-root {
+      width: 2.3rem;
+      text-align: center;
+    }
   }
 
   .mantine-DatePicker-day {
