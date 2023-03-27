@@ -11,6 +11,8 @@ import {
 import { MantineProvider } from '@mantine/core';
 import { globalStyles } from '@styles/global.styles';
 
+const { VITE_KAKAO_JAVASCRIPT_KEY } = import.meta.env;
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Kakao = (window as any)?.Kakao;
+Kakao.init(VITE_KAKAO_JAVASCRIPT_KEY);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
