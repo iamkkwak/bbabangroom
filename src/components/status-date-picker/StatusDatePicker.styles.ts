@@ -11,10 +11,13 @@ export const datePickerWrap = css`
   }
 
   .mantine-DatePicker-calendarHeader {
-    pointer-events: none;
     font-size: 120%;
     height: 4rem;
     max-width: unset;
+  }
+
+  .mantine-DatePicker-calendarHeaderLevel {
+    pointer-events: none;
   }
 
   .mantine-DatePicker-month {
