@@ -1,7 +1,8 @@
 import { memo } from 'react';
 import { Indicator } from '@mantine/core';
 import { DatePicker } from '@mantine/dates';
-import { dayjs, formatDate, isKoreanHoliday } from '@utils/dayjs.utils';
+import { dayjs, formatDate } from '@utils/dayjs.utils';
+import { getDayProps } from '@utils/mantine.utils';
 import { includes } from 'lodash';
 
 import * as styles from './StatusDatePicker.styles';
@@ -37,15 +38,7 @@ const StatusDatePicker: React.FC<StatusDatePickerProps> = ({
             </Indicator>
           );
         }}
-        getDayProps={(date) =>
-          isKoreanHoliday(date)
-            ? {
-                sx: (theme) => ({
-                  color: theme.colors.red[theme.fn.primaryShade()],
-                }),
-              }
-            : {}
-        }
+        getDayProps={getDayProps}
         minDate={dayjs().toDate()}
         maxDate={dayjs().add(6, 'day').toDate()}
         monthLabelFormat="YYYY년 MMMM"
