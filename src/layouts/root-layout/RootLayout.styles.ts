@@ -9,7 +9,6 @@ export const wrapper = css`
 `;
 
 export const section = css`
-  flex: 1;
-  padding-bottom: 2.5rem;
-  overflow: auto;
+  height: calc(100vh - 5.8rem - 2.5rem);
+  overflow: hidden;
 `;

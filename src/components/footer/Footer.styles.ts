@@ -1,6 +1,8 @@
 import { css } from '@emotion/react';
 import { selectNone } from '@styles/utils.styles';
 
+export const FOOTER_HEIGHT = 2.5;
+
 export const footer = css`
   ${selectNone};
 
@@ -13,7 +15,7 @@ export const footer = css`
   justify-content: center;
 
   width: 100%;
-  height: 2.5rem;
+  height: ${FOOTER_HEIGHT}rem;
   overflow: hidden;
   background-color: #eee;
 

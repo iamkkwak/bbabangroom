@@ -2,16 +2,25 @@ import { css } from '@emotion/react';
 import { mainColor } from '@styles/colors.styles';
 import { selectNone } from '@styles/utils.styles';
 
+export const HEADER_HEIGHT = 5.8;
+
 export const header = css`
   ${selectNone};
 
   display: flex;
   align-items: center;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; */
+
   width: 100%;
-  min-height: 5.8rem;
+  height: ${HEADER_HEIGHT}rem;
   padding: 1.2rem 0;
   background: linear-gradient(135deg, ${mainColor.c01}, ${mainColor.c02});
   box-shadow: rgb(0 0 0 / 8%) 0px 0px 1rem;
+
   overflow: hidden;
   white-space: nowrap;
 `;
