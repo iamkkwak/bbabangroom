@@ -30,11 +30,7 @@ export const getEventData = (events: Events): StatusData => {
     const startAt = convertUTCtoLocalTime(event.attributes.start_at);
     const endAt = convertUTCtoLocalTime(event.attributes.end_at);
 
-    for (
-      let date = startAt;
-      date.isBefore(endAt) || date.isSame(endAt);
-      date = date.add(1, 'hour')
-    ) {
+    for (let date = startAt; date.isBefore(endAt); date = date.add(1, 'hour')) {
       const dateKey = formatDate(date);
       const timeKey = formatTime(date);
       eventData[dateKey].time[timeKey] = true;
