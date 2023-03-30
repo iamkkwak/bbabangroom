@@ -13,6 +13,12 @@ interface PriceDatePickerProps {}
 const PriceDatePicker: React.FC<PriceDatePickerProps> = () => {
   const { date, setDate } = useContext(PriceContext);
 
+  const today = dayjs();
+  const maxDate =
+    today.date() === today.daysInMonth()
+      ? today.add(dayjs().daysInMonth() - 1, 'day')
+      : today.add(1, 'month').subtract(1, 'day');
+
   return (
     <div css={styles.priceDatePicker}>
       <DatePickerInput
@@ -22,8 +28,8 @@ const PriceDatePicker: React.FC<PriceDatePickerProps> = () => {
         getDayProps={getDayProps}
         value={date}
         onChange={setDate}
-        minDate={dayjs().toDate()}
-        maxDate={dayjs().add(1, 'month').subtract(1, 'day').toDate()}
+        minDate={today.toDate()}
+        maxDate={maxDate.toDate()}
         monthLabelFormat="YYYY년 MMMM"
         valueFormat="YYYY.MM.DD (dd)"
       />
