@@ -20,7 +20,22 @@ const PriceInput: React.FC<PriceInputProps> = () => {
         실제 예약 가능 여부는 카카오톡 채널로 문의해주세요.
       </span>
       <div>
-        <label>이용 날짜</label>
+        <label>
+          이용 날짜&nbsp;
+          <Tooltip
+            label={
+              <span>
+                오늘로부터 한달 뒤까지만 예약 가능합니다.
+                <br />
+                (예: 오늘이 1월 15일이라면, 2월 14일까지)
+              </span>
+            }
+            position="bottom"
+            events={{ hover: true, focus: true, touch: true }}
+          >
+            <FontAwesomeIcon icon={faCircleQuestion} />
+          </Tooltip>
+        </label>
         <div>
           <PriceDatePicker />
         </div>
@@ -35,7 +50,13 @@ const PriceInput: React.FC<PriceInputProps> = () => {
         <label>
           이용 시간&nbsp;
           <Tooltip
-            label={<span>주말(금~일) 및 공휴일은 최소 4시간</span>}
+            label={
+              <span>
+                평일부터 시작했더라도 24시를 넘어 주말이 된 경우
+                <br />
+                해당 시간만큼 주말 요금으로 계산됩니다.
+              </span>
+            }
             position="bottom"
             events={{ hover: true, focus: true, touch: true }}
           >
@@ -47,22 +68,7 @@ const PriceInput: React.FC<PriceInputProps> = () => {
         </div>
       </div>
       <div>
-        <label>
-          인원 수&nbsp;
-          <Tooltip
-            label={
-              <span>
-                기본 인원은 1~6인
-                <br />
-                인원 추가 시 최대 10명까지 가능
-              </span>
-            }
-            position="bottom"
-            events={{ hover: true, focus: true, touch: true }}
-          >
-            <FontAwesomeIcon icon={faCircleQuestion} />
-          </Tooltip>
-        </label>
+        <label>인원 수</label>
         <div>
           <PricePersonInput />
         </div>
