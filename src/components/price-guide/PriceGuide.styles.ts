@@ -15,7 +15,7 @@ export const priceGuide = css`
   }
 
   > p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
     > span {
       display: block;

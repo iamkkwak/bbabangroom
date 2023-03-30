@@ -7,8 +7,8 @@ export const priceInput = css`
   justify-content: center;
   row-gap: 1rem;
 
-  > h3 {
-    margin-bottom: 1rem;
+  svg {
+    color: ${infoTextColor};
   }
 
   > div {
@@ -20,11 +20,7 @@ export const priceInput = css`
     > label {
       display: inline-block;
       font-weight: bold;
-      min-width: 9.5rem;
-
-      svg {
-        color: ${infoTextColor};
-      }
+      min-width: 10rem;
 
       span {
         font-size: 1.2rem;
@@ -36,4 +32,13 @@ export const priceInput = css`
       min-width: 20rem;
     }
   }
+`;
+
+export const description = css`
+  display: block;
+  color: ${infoTextColor};
+  font-size: 1.2rem;
+  line-height: 160%;
+
+  margin-bottom: 1rem;
 `;

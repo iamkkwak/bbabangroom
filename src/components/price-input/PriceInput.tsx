@@ -14,6 +14,11 @@ const PriceInput: React.FC<PriceInputProps> = () => {
   return (
     <div css={styles.priceInput}>
       <h3>빠방룸 요금 계산기</h3>
+      <span css={styles.description}>
+        요금이 헷갈리는 분들을 위한 단순한 요금 계산기입니다.
+        <br />
+        실제 예약 가능 여부는 카카오톡 채널로 문의해주세요.
+      </span>
       <div>
         <label>이용 날짜</label>
         <div>
