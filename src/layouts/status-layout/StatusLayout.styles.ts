@@ -7,6 +7,7 @@ export const statusLayout = css`
   justify-content: center;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   overflow: auto;
 
   ${selectNone};
@@ -20,6 +21,7 @@ export const status = (isLandscape: boolean) => css`
   column-gap: 5vw;
 
   height: ${isLandscape ? '' : '100%'};
+  min-height: ${isLandscape ? '' : '100%'};
   padding: 3rem 2rem;
 
   ${isLandscape

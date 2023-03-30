@@ -11,7 +11,7 @@ export const selectNone = css`
 
 export const scrollOverlay = css`
   /* scroll bar width, for use in mask calculations */
-  --scrollbar-width: 8px;
+  --scrollbar-width: 1.5rem;
 
   /* mask fade distance, for use in mask calculations */
   --mask-height: 6rem;
