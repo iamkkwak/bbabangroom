@@ -103,3 +103,17 @@ export const isKoreanHoliday = (date: Dayjs.ConfigType) => {
   const value = Dayjs(date);
   return value.isValid() && includes(koreanHolidays, formatDate(Dayjs(date)));
 };
+
+// 빠방 주말 기준은 금토일
+export const isWeekend = (date: Dayjs.ConfigType) => {
+  const value = Dayjs(date);
+  return (
+    value.isValid() &&
+    (value.day() === 0 || value.day() === 5 || value.day() === 6)
+  );
+};
+
+export const isWeekendOrHoliday = (date: Dayjs.ConfigType) => {
+  const value = Dayjs(date);
+  return value.isValid() && (isKoreanHoliday(value) || isWeekend(value));
+};
