@@ -36,7 +36,7 @@ const buttonStyles = (
       color: textColor,
       backgroundColor,
       borderColor,
-      height: '3.6rem',
+      height: '3.75rem',
       fontSize: '1.4rem',
       width,
       padding: '0 2rem',
