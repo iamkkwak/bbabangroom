@@ -12,11 +12,14 @@ export const getTimeData = () => {
 
   return map(Array(24).fill(false), (__, index) => {
     const formattedTime = formatTime(index);
-    const disabled = dayjs(selectedDate).add(index, 'hour').isBefore(dayjs())
-      ? true
-      : false;
 
-    if (!disabled)
+    // 23:mm 일 때 드롭다운이 비어있는 경우가 생겨서
+    // hh:mm이어도 hh:00을 선택할 수 있도록 함
+    const passed = dayjs(selectedDate)
+      .add(index + 1, 'hour')
+      .isBefore(dayjs());
+
+    if (!passed)
       return {
         value: formattedTime,
         label: formattedTime,
