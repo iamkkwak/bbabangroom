@@ -1,3 +1,4 @@
+import { TIMETREE_CALENDAR_ID } from '@constants/id.constants';
 import { fetchWithTimeout } from '@utils/api.utils';
 
 const { VITE_TIMETREE_TOKEN } = import.meta.env;
@@ -28,7 +29,7 @@ const headers = {
 
 export async function getEvents(): Promise<Events> {
   const url = new URL(
-    'https://timetreeapis.com/calendars/Wfov6zUzT6yX/upcoming_events',
+    `https://timetreeapis.com/calendars/${TIMETREE_CALENDAR_ID}/upcoming_events`,
   );
   const params = {
     timezone: 'Asia/Seoul',
