@@ -25,6 +25,7 @@ const PriceTimeSelect: React.FC<PriceTimeSelectProps> = () => {
         value={time}
         onChange={setTime}
         rightSection={<FontAwesomeIcon icon={faAngleDown} />}
+        styles={{ rightSection: { pointerEvents: 'none' } }}
         maxDropdownHeight={500}
       />
     </div>
