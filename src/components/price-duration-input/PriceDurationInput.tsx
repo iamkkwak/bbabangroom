@@ -1,5 +1,6 @@
-import { useContext, useEffect } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import {
+  MAX_DURATION,
   MIN_WEEKDAY_DURATION,
   MIN_WEEKEND_DURATION,
 } from '@constants/price.constants';
@@ -20,6 +21,19 @@ const PriceDurationInput: React.FC<PriceDurationInputProps> = () => {
     ? MIN_WEEKEND_DURATION
     : MIN_WEEKDAY_DURATION;
 
+  const handleChange = useCallback(
+    (value: number | '') => {
+      if (!value) {
+        setDuration(minDuration);
+      } else {
+        if (value > MAX_DURATION) setDuration(MAX_DURATION);
+        else if (value < minDuration) setDuration(minDuration);
+        else setDuration(value);
+      }
+    },
+    [minDuration, setDuration],
+  );
+
   useEffect(() => {
     if (!date) return;
     setDuration(MIN_WEEKEND_DURATION);
@@ -32,7 +46,7 @@ const PriceDurationInput: React.FC<PriceDurationInputProps> = () => {
         icon={<FontAwesomeIcon icon={faHourglassHalf} />}
         placeholder={'시간'}
         value={duration}
-        onChange={setDuration}
+        onChange={handleChange}
         min={minDuration}
         max={24}
       />
