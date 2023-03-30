@@ -7,6 +7,11 @@ export const priceInput = css`
   justify-content: center;
   row-gap: 1rem;
 
+  // iOS에서 input이 16px 이하면 확대되는 문제 방지
+  .mantine-InputWrapper-root {
+    font-size: 16px;
+  }
+
   svg {
     color: ${infoTextColor};
   }
