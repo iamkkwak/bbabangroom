@@ -43,7 +43,7 @@ const PriceGuide: React.FC<PriceGuideProps> = () => {
       </h4>
       <p>
         <span>10시간 이상 예약 시 10% 할인!</span>
-        <span css={styles.tip}>Tip. 9시간과 10시간 가격이 똑같아요.</span>
+        <span css={styles.tip}>Tip. 9시간과 10시간 가격을 비교해보세요.</span>
       </p>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import ReservationButton from '@components/reservation-button/ReservationButton';
+import { EXTRA_DISCOUNT_DURATION } from '@constants/price.constants';
 import { PriceContext } from '@containers/price-container/PriceContainer';
 import { formatDate } from '@utils/dayjs.utils';
 import { every } from 'lodash';
@@ -26,7 +27,7 @@ const PriceOutput: React.FC<PriceOutputProps> = () => {
         <>
           <p css={styles.priceResult}>
             이용 요금은{' '}
-            <span>
+            <span className="price">
               총{' '}
               {calculatePrice(form)
                 .toString()
@@ -35,6 +36,9 @@ const PriceOutput: React.FC<PriceOutputProps> = () => {
               원
             </span>{' '}
             입니다.
+            {duration >= EXTRA_DISCOUNT_DURATION && (
+              <span className="info">장시간 할인 10%가 적용되었습니다.</span>
+            )}
           </p>
           <ReservationButton copyText={getCopyText(form)} />
         </>
