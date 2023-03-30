@@ -39,7 +39,11 @@ export const price = (isLandscape: boolean) => css`
         min-width: 50vw;
 
         > div:last-of-type {
-          width: min(100%, 36.6rem);
+          width: min(100%, 39.33rem);
+
+          @media (min-width: 768px) {
+            width: min(100%, 37.1rem);
+          }
         }
       `}
 

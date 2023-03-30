@@ -20,6 +20,14 @@ export const datePickerWrap = css`
     pointer-events: none;
   }
 
+  .mantine-DatePicker-calendarHeaderControl {
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: black;
+    }
+  }
+
   .mantine-DatePicker-month {
     width: 30rem;
   }
