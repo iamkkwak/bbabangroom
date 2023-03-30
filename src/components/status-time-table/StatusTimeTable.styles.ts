@@ -4,12 +4,17 @@ export const timeTableWrap = (isLandscape: boolean) => css`
   text-align: center;
   width: ${isLandscape ? '52rem' : '35rem'};
   min-height: 28rem;
+  padding-top: 5rem;
 
   .mantine-Badge-root {
     font-size: 100%;
     width: 7.5rem;
     height: 3rem;
     margin: 0.5rem;
+  }
+
+  > dl {
+    margin-bottom: 3rem;
   }
 `;
 
@@ -24,4 +29,8 @@ export const colorLegend = css`
     vertical-align: middle;
     margin: 0 2rem 0 1rem;
   }
+`;
+
+export const reservationButton = css`
+  padding-bottom: 5rem;
 `;

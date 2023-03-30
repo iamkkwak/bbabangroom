@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import ReservationButton from '@components/reservation-button/ReservationButton';
 import { Time } from '@components/status/Status.types';
 import { useLandscape } from '@hooks/useViewport';
 import { Badge, ColorSwatch } from '@mantine/core';
@@ -6,6 +7,7 @@ import { mainColor } from '@styles/colors.styles';
 import { isEmpty, map } from 'lodash';
 
 import * as styles from './StatusTimeTable.styles';
+import { getEmptyCopyText } from './StatusTimeTable.utils';
 
 interface StatusTimeBadgesProps {
   reservedTime: Time;
@@ -39,6 +41,12 @@ const StatusTimeBadges: React.FC<StatusTimeBadgesProps> = ({
               </Badge>
             ))}
           </dl>
+          <div css={styles.reservationButton}>
+            <ReservationButton
+              copyText={getEmptyCopyText()}
+              flexDirection={isLandscape ? 'row' : 'column'}
+            />
+          </div>
         </>
       )}
     </div>

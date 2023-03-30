@@ -7,6 +7,7 @@ interface PriceLayoutProps {}
 
 const PriceLayout: React.FC<PriceLayoutProps> = () => {
   const isLandscape = useLandscape();
+
   return (
     <div css={styles.priceLayout}>
       <div css={styles.price(isLandscape)}>

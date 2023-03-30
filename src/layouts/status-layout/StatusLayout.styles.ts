@@ -16,23 +16,18 @@ export const status = (isLandscape: boolean) => css`
   display: flex;
   flex-direction: ${isLandscape ? 'row' : 'column'};
   align-items: center;
-  justify-content: center;
 
-  row-gap: 5vh;
   column-gap: 5vw;
 
   height: ${isLandscape ? '' : '100%'};
-  padding: 2rem;
+  padding: 3rem 2rem;
 
   ${isLandscape
     ? css`
         width: 90vw;
+        justify-content: center;
       `
     : css`
         min-width: 50vw;
       `}
-
-  > div {
-    height: 100%;
-  }
 `;
