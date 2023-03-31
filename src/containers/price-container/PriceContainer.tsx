@@ -45,14 +45,6 @@ const PriceContainer: React.FC<PriceContainerProps> = () => {
     setDate(date);
 
     if (date) {
-      setTime(null);
-      setDuration('');
-      setPerson('');
-
-      window.sessionStorage.removeItem('price-time');
-      window.sessionStorage.removeItem('price-duration');
-      window.sessionStorage.removeItem('price-person');
-
       const formattedDate = formatDate(date);
       window.sessionStorage.setItem('price-date', formattedDate);
     }

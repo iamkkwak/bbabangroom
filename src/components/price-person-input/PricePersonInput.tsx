@@ -31,8 +31,8 @@ const PricePersonInput: React.FC<PricePersonInputProps> = () => {
 
   useEffect(() => {
     if (!date) return;
-    setPerson(DEFAULT_CAPACITY);
-  }, [date, setPerson]);
+    setPerson(person || DEFAULT_CAPACITY);
+  }, [date, person, setPerson]);
 
   return (
     <div css={styles.pricePersonInput}>

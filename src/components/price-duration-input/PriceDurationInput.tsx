@@ -36,8 +36,8 @@ const PriceDurationInput: React.FC<PriceDurationInputProps> = () => {
 
   useEffect(() => {
     if (!date) return;
-    setDuration(MIN_WEEKEND_DURATION);
-  }, [date, setDuration]);
+    setDuration(duration || MIN_WEEKEND_DURATION);
+  }, [date, duration, setDuration]);
 
   return (
     <div css={styles.priceDurationInput}>
