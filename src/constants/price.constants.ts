@@ -1,5 +1,6 @@
 export const WEEKDAY_HOURLY_PRICE = 5000;
 export const WEEKEND_HOURLY_PRICE = 6000;
+export const HOURLY_PRICE = 8000; // 2023-12-22부터 적용
 
 // 주말에는 최소 4시간 이상 예약 가능
 export const MIN_WEEKDAY_DURATION = 1;

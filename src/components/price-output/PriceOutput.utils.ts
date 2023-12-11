@@ -3,10 +3,9 @@ import {
   EXTRA_DISCOUNT_DURATION,
   EXTRA_DISCOUNT_PERCENT,
   EXTRA_PERSON_HOURLY_PRICE,
-  WEEKDAY_HOURLY_PRICE,
-  WEEKEND_HOURLY_PRICE,
 } from '@constants/price.constants';
-import { dayjs, formatDate, isWeekendOrHoliday } from '@utils/dayjs.utils';
+import { dayjs, formatDate } from '@utils/dayjs.utils';
+import { getHourlyPrice } from '@utils/price.utils';
 
 type PriceForm = {
   date: string;
@@ -30,9 +29,7 @@ export const calculatePrice = (form: PriceForm) => {
     date = date.add(1, 'hour')
   ) {
     price =
-      price +
-      (isWeekendOrHoliday(date) ? WEEKEND_HOURLY_PRICE : WEEKDAY_HOURLY_PRICE) +
-      EXTRA_PERSON_HOURLY_PRICE * extraPerson;
+      price + getHourlyPrice(date) + EXTRA_PERSON_HOURLY_PRICE * extraPerson;
   }
 
   return duration < EXTRA_DISCOUNT_DURATION
