@@ -24,9 +24,7 @@ const PriceGuide: React.FC<PriceGuideProps> = () => {
         <span>가격</span>
       </h4>
       <p>
-        <span>평일(월~목): 시간당 5,000원</span>
-        <span>주말(금~일) 및 공휴일: 시간당 6,000원</span>
-        <span>2023년 12월 22일 이후: 시간당 8,000원으로 통일</span>
+        <span>평일/주말 관계없이 시간당 8,000원</span>
         <span>인원 초과 시 1인 시간당 1,000원 추가</span>
       </p>
       <h4>
